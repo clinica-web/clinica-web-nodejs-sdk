@@ -159,7 +159,7 @@ schemas. [Complete API reference](docs/api-reference.md) lists every callable me
 
 Generation uses the .NET resource aliases and raw-response exceptions, checks
 snapshot provenance, rejects missing/duplicate operation IDs and method collisions,
-and preserves all 82 added IDs and 108 renames. The original five friendly method
+and validates unique operation IDs against the current snapshot. The original five friendly method
 families remain compatible; other names follow camelCase operation IDs.
 
 513 operations use root resource groups, 63 use `client.online.<resource>`, and
@@ -194,9 +194,8 @@ remain raw-only. Missing success schemas return `unknown`: JSON is parsed by
 content type, empty bodies return undefined, text returns a string; undeclared
 binary bodies require the Response method. Declared 204 responses return undefined.
 
-The backend audit records 99 fixed, 285 source-verified and 204 uncertain
-operations. Full generation does not certify live backend behavior. See
-[coordination notes](docs/sdk-coordination.md).
+Full generation does not certify live backend behavior. Tests use controlled
+responses; integrations should be verified against the target deployment.
 
 ```sh
 npm ci
@@ -227,3 +226,7 @@ Set `OPENAPI_URL` in a local `.env` (see `.env.example`), then run
 `npm run schema:update` and `npm run verify`. The dev Swagger endpoint requires
 no authentication. CI and releases continue using the committed snapshot.
 See [schema configuration and Git rules](docs/schema-updates.md).
+
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Clinica Web.

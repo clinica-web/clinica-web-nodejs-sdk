@@ -5,7 +5,7 @@
 Push these files to [clinica-web/clinica-web-nodejs-sdk](https://github.com/clinica-web/clinica-web-nodejs-sdk)
 with default branch `main`. The package name is
 `@clinica-web/sdk`; the publishing account must own or have publish permission
-in that npm scope. Choose the repository's license before public distribution.
+in that npm scope. The SDK is distributed under the MIT license.
 
 1. In GitHub Settings > Actions > General, allow GitHub Actions to create and
    approve pull requests. Use squash merges and the PR title as the squash commit

@@ -3,25 +3,17 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createClinicaClient } from "../dist/index.js";
 
-test("full snapshot preserves 82 added IDs and 108 renamed IDs", async () => {
-  const read = async (name) =>
-    JSON.parse(
-      await readFile(
-        new URL(`../openapi/${name}.json`, import.meta.url),
-        "utf8",
-      ),
-    );
-  const full = await read("swagger");
-  const additions = await read("operation-additions");
-  const renames = await read("operation-renames");
-  assert.equal(additions.applied.length, 82);
-  assert.equal(renames.mappings.length, 108);
-  for (const entry of [...additions.applied, ...renames.mappings]) {
-    assert.equal(
-      full.paths[entry.path][entry.method.toLowerCase()].operationId,
-      entry.operationId,
-    );
-  }
+const spec = JSON.parse(
+  await readFile(new URL("../openapi/swagger.json", import.meta.url), "utf8"),
+);
+const operations = JSON.parse(
+  await readFile(
+    new URL("../openapi/operations.json", import.meta.url),
+    "utf8",
+  ),
+);
+
+test("current schema has unique IDs and every operation is generated exactly once", () => {
   const methods = new Set([
     "get",
     "post",
@@ -32,25 +24,27 @@ test("full snapshot preserves 82 added IDs and 108 renamed IDs", async () => {
     "options",
     "trace",
   ]);
-  const ids = Object.values(full.paths).flatMap((item) =>
+  const expected = Object.entries(spec.paths).flatMap(([path, item]) =>
     Object.entries(item)
       .filter(([method]) => methods.has(method))
-      .map(([, operation]) => operation.operationId),
+      .map(([method, operation]) => ({
+        method,
+        path,
+        operationId: operation.operationId,
+      })),
   );
-  assert.equal(ids.length, 588);
-  assert.ok(ids.every((id) => typeof id === "string" && id.trim()));
-  assert.equal(new Set(ids.map((id) => id.toLowerCase())).size, 588);
+  assert.equal(expected.length, 588);
+  const ids = expected.map((o) => o.operationId);
+  assert.ok(
+    ids.every((id) => typeof id === "string" && /^[A-Za-z_$][\w$]*$/.test(id)),
+  );
+  assert.equal(new Set(ids.map((id) => id.toLowerCase())).size, ids.length);
+  const signature = (o) => JSON.stringify([o.method, o.path, o.operationId]);
+  assert.deepEqual(
+    operations.map(signature).sort(),
+    expected.map(signature).sort(),
+  );
 });
-
-const spec = JSON.parse(
-  await readFile(new URL("../openapi/swagger.json", import.meta.url), "utf8"),
-);
-const operations = JSON.parse(
-  await readFile(
-    new URL("../openapi/operations.json", import.meta.url),
-    "utf8",
-  ),
-);
 
 test("operation mapping exposes implemented methods for all 588 server operations", () => {
   const client = createClinicaClient({ baseUrl: "https://example.test" });
