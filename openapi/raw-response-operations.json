@@ -1,0 +1,9 @@
+[
+  "get /api/online/v1/patient/history/print/analysis/{analysisId}",
+  "get /api/online/v1/patient/history/print/analyses",
+  "get /api/online/v1/patient/history/print/protocol/{protocolId}",
+  "get /api/public/v1/patients/{patientId}/analyses/{analysisId}/print",
+  "get /api/public/v1/patients/{patientId}/protocols/{protocolId}/print",
+  "get /api/v1/referringDoctor/print/survey/{surveyId}",
+  "get /api/v1/referringDoctor/printRaw/survey/{surveyId}"
+]

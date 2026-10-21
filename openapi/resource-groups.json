@@ -1,0 +1,11 @@
+{
+  "patient": "Patients",
+  "referringDoctor": "Referring",
+  "referringDoctors": "ReferringDoctors",
+  "salepack": "Salepacks",
+  "laboratory": "Laboratories",
+  "package-category": "PackageCategories",
+  "package-categories": "PackageCategories",
+  "clinic-onilne-prices": "Prices",
+  "public": "Files"
+}

@@ -1,0 +1,9 @@
+{
+  "operations": {
+    "get /api/erp/v1/clinics": { "name": "list" },
+    "put /api/erp/v1/clinics/{id}": { "name": "update", "parameters": { "id": "clinicId" }, "bodyName": "clinic", "reader": "empty" },
+    "get /api/erp/v1/reports/cashDesk": { "name": "cashDesk", "streamName": "streamCashDesk" },
+    "get /api/public/v1/patients/{patientId}/analyses/{analysisId}/analysis-conclusion": { "name": "getAnalysisConclusion" },
+    "get /api/public/v1/patients/{patientId}/analyses/{analysisId}/print": { "name": "printAnalysis" }
+  }
+}

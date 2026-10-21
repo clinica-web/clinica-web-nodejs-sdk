@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tgz
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Download staging, test output and logs
+.cache/
+coverage/
+*.log

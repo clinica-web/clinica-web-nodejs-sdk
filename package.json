@@ -1,0 +1,81 @@
+{
+  "name": "@clinica-web/sdk",
+  "version": "0.1.0",
+  "description": "Clinica Web API client for Node.js and Web API runtimes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clinica-web/clinica-web-nodejs-sdk.git"
+  },
+  "homepage": "https://github.com/clinica-web/clinica-web-nodejs-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/clinica-web/clinica-web-nodejs-sdk/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "docs/api-reference.md",
+    "docs/releases.md",
+    "docs/sdk-coordination.md",
+    "docs/schema-updates.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./auth": {
+      "import": {
+        "types": "./dist/auth/index.d.ts",
+        "default": "./dist/auth/index.js"
+      },
+      "require": {
+        "types": "./dist/auth/index.d.cts",
+        "default": "./dist/auth/index.cjs"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-sdk.mjs",
+    "build": "tsup src/index.ts src/auth/index.ts --format esm,cjs --dts --splitting --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && tsc -p tests/types/tsconfig.json && node --test tests/*.test.mjs",
+    "format": "prettier --write src tests scripts package.json tsconfig.json README.md .github release-please-config.json .release-please-manifest.json docs/releases.md docs/schema-updates.md",
+    "format:check": "prettier --check src tests scripts package.json tsconfig.json README.md .github release-please-config.json .release-please-manifest.json docs/releases.md docs/schema-updates.md",
+    "verify": "npm run typecheck && node scripts/generate-sdk.mjs --check && npm run format:check && npm test",
+    "schema:update": "node scripts/update-schema.mjs && npm run generate"
+  },
+  "dependencies": {
+    "@streamparser/json": "0.0.26"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "miniflare": "4.20260730.0",
+    "prettier": "3.9.10",
+    "tsup": "9.0.0",
+    "typescript": "6.0.3"
+  },
+  "overrides": {
+    "miniflare": {
+      "undici": "7.29.1",
+      "sharp": "0.35.5"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

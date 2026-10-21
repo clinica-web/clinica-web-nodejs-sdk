@@ -1,0 +1,908 @@
+{
+  "createdUtc": "2026-10-21T15:01:25.178834+03:00",
+  "scope": "82 proposal operations with status add; prior 108 renames and response fixes preserved",
+  "proposal": {
+    "path": "D:\\src\\repos\\clinica-web-dotnet-sdk\\reviews\\operation-naming\\operations.json",
+    "sha256": "2c401a24b3067767d6892fe41b3f78ee8ebba21b0d6575bb2e1b6b318086faec"
+  },
+  "baseline": {
+    "path": "C:\\Users\\OLEKSA~1\\AppData\\Local\\Temp\\gambit-operation-additions-before\\wwwroot\\swagger\\v1\\swagger.json",
+    "sha256": "9b8c0551caedead3fa37b13938f4daff1ab9bb9748f347c52f63a890057406f9"
+  },
+  "swagger": {
+    "path": "C:\\Users\\OLEKSA~1\\AppData\\Local\\Temp\\gambit-operation-additions-after\\wwwroot\\swagger\\v1\\swagger.json",
+    "sha256": "627abfdb55d99b529a84193a721ea672c57aa2229417d716275438d5b99d36bc",
+    "provenance": "Generated offline from current working tree via Gambit.WebApp/bin/OpenApiContractChecks/Gambit.WebApp.dll --swagger true; host not started, not deployed"
+  },
+  "counts": {
+    "requested": 82,
+    "applied": 82,
+    "alreadyPresent": 0,
+    "exceptions": 0,
+    "operations": 588,
+    "named": 588,
+    "missing": 0
+  },
+  "checks": {
+    "exactApprovedOperationIdOnlyDocumentChange": true,
+    "caseInsensitiveUniqueOperationIds": true,
+    "metadataOnlySourceFiles": 28,
+    "priorRenamesPreserved": true,
+    "responsesSchemasSecurityRoutesMethodsParametersTagsUnchanged": true
+  },
+  "applied": [
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/administrative-expenses",
+      "previousOperationId": null,
+      "operationId": "GetAdministrativeExpenses",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/administrative-expenses",
+      "previousOperationId": null,
+      "operationId": "CreateAdministrativeExpense",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/administrative-expenses/{AdministrativeExpenseId}",
+      "previousOperationId": null,
+      "operationId": "DeleteAdministrativeExpense",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/administrative-expenses/{AdministrativeExpenseId}",
+      "previousOperationId": null,
+      "operationId": "GetAdministrativeExpenseById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/administrative-expenses/{AdministrativeExpenseId}",
+      "previousOperationId": null,
+      "operationId": "UpdateAdministrativeExpense",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/administrative-expenses-category",
+      "previousOperationId": null,
+      "operationId": "CreateAdministrativeExpenseCategory",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpenseCategorysController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/administrative-expenses-category/{Id}",
+      "previousOperationId": null,
+      "operationId": "DeleteAdministrativeExpenseCategory",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpenseCategorysController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/administrative-expenses-category/{Id}",
+      "previousOperationId": null,
+      "operationId": "GetAdministrativeExpenseCategoryById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpenseCategorysController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/administrative-expenses-category/{Id}",
+      "previousOperationId": null,
+      "operationId": "UpdateAdministrativeExpenseCategory",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpenseCategorysController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/assurances",
+      "previousOperationId": null,
+      "operationId": "CreateAssurance",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAssuranceController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/assurances/{AssuranceId}",
+      "previousOperationId": null,
+      "operationId": "DeleteAssurance",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAssuranceController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/assurances/{AssuranceId}",
+      "previousOperationId": null,
+      "operationId": "GetAssuranceById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAssuranceController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/assurances/{AssuranceId}",
+      "previousOperationId": null,
+      "operationId": "UpdateAssurance",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAssuranceController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/cities",
+      "previousOperationId": null,
+      "operationId": "SearchCityLookup",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PublicCitiesMinimalApi.cs",
+      "handler": "SearchAsync",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/cities/{id}",
+      "previousOperationId": null,
+      "operationId": "GetCityLookupById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PublicCitiesMinimalApi.cs",
+      "handler": "GetById",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/contractors",
+      "previousOperationId": null,
+      "operationId": "GetContractors",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/contractors",
+      "previousOperationId": null,
+      "operationId": "CreateContractor",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/contractors/{contractorId}",
+      "previousOperationId": null,
+      "operationId": "DeleteContractor",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/contractors/{contractorId}",
+      "previousOperationId": null,
+      "operationId": "GetContractorById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/contractors/{contractorId}",
+      "previousOperationId": null,
+      "operationId": "UpdateContractor",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/contracts",
+      "previousOperationId": null,
+      "operationId": "CreatePatientContract",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/contracts/{id}/info",
+      "previousOperationId": null,
+      "operationId": "GetContractInfo",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+      "handler": "GetStatus",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/contracts/calculate-packages-cost",
+      "previousOperationId": null,
+      "operationId": "CalculateContractPackagesCost",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+      "handler": "CalculatePackagesCost",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/contracts/cancel-contract",
+      "previousOperationId": null,
+      "operationId": "CancelContract",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+      "handler": "CancelContract",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/contracts/payment-confirm",
+      "previousOperationId": null,
+      "operationId": "ConfirmContractPayment",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+      "handler": "PaymentConfirm",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/public/files/initialize",
+      "previousOperationId": null,
+      "operationId": "InitializePublicFileUpload",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/Files/ERPPublicFilesMinimalApi.cs",
+      "handler": "GetUploadUri",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/public/files/initialize/{fileName}",
+      "previousOperationId": null,
+      "operationId": "InitializePublicFileUploadByPathFileName",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/Files/ERPPublicFilesMinimalApi.cs",
+      "handler": "GetUploadUri",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/hospitalization-categories/lookup",
+      "previousOperationId": null,
+      "operationId": "GetHospitalizationCategoriesLookup",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/Hospitalizations/ERPHospitalizationCategoryMinimalApi.cs",
+      "handler": "GetAll",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/hospitals",
+      "previousOperationId": null,
+      "operationId": "GetHospitals",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/hospitals",
+      "previousOperationId": null,
+      "operationId": "CreateHospital",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/hospitals/{hospitalId}",
+      "previousOperationId": null,
+      "operationId": "DeleteHospital",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/hospitals/{hospitalId}",
+      "previousOperationId": null,
+      "operationId": "GetHospitalById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/hospitals/{hospitalId}",
+      "previousOperationId": null,
+      "operationId": "UpdateHospital",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/hospitals",
+      "previousOperationId": null,
+      "operationId": "SearchHospitalLookup",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Hospitals/HospitalsMiniamlApi.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/hospitals/{id}",
+      "previousOperationId": null,
+      "operationId": "GetHospitalLookupById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/Hospitals/HospitalsMiniamlApi.cs",
+      "handler": "GetById",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patients/password/confirm",
+      "previousOperationId": null,
+      "operationId": "ConfirmPatientPasswordReset",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientsController.cs",
+      "handler": "ConfirmReset",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patients/password/reset",
+      "previousOperationId": null,
+      "operationId": "RequestPatientPasswordReset",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientsController.cs",
+      "handler": "Reset",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patients/register",
+      "previousOperationId": null,
+      "operationId": "RegisterPatient",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientsController.cs",
+      "handler": "Register",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patients/register/initialize",
+      "previousOperationId": null,
+      "operationId": "InitializePatientRegistration",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientsController.cs",
+      "handler": "InitializeRegister",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/package-price/packages/{packageId}",
+      "previousOperationId": null,
+      "operationId": "GetPackagePricesByPackageId",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+      "handler": "GetAllByPackageId",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/package-price/packages/{packageId}/prices/{priceId}",
+      "previousOperationId": null,
+      "operationId": "DeletePackagePrice",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/erp/v1/package-price/packages/{packageId}/prices/{priceId}",
+      "previousOperationId": null,
+      "operationId": "UpdatePackagePrice",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+      "handler": "Patch",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/package-price/packages/{packageId}/prices/{priceId}",
+      "previousOperationId": null,
+      "operationId": "CreatePackagePrice",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/package-price/prices/{priceId}",
+      "previousOperationId": null,
+      "operationId": "GetPackagePricesByPriceId",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+      "handler": "GetAllByPriceId",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/patient/{externalPatientId}/prerecords/countPlanned",
+      "previousOperationId": null,
+      "operationId": "GetPlannedPrerecordCountByExternalPatientId",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientPrerecordsMinimalApi.cs",
+      "handler": "GetCountOfPlannedPrerecordsByExternalId",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/patient/analysis/{id}/information",
+      "previousOperationId": null,
+      "operationId": "GetCurrentPatientAnalysisInformation",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientHistoryInformationController.cs",
+      "handler": "GetAnalysisInformation",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patient/identity/changePassword",
+      "previousOperationId": null,
+      "operationId": "ChangeCurrentPatientPassword",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientIdentityController.cs",
+      "handler": "ChangePassword",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patient/identity/changePhone",
+      "previousOperationId": null,
+      "operationId": "ChangeCurrentPatientPhone",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientIdentityController.cs",
+      "handler": "ChangePhone",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/online/v1/patient/identity/update",
+      "previousOperationId": null,
+      "operationId": "UpdateCurrentPatientProfile",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientIdentityController.cs",
+      "handler": "UpdateInformation",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/patient/protocols/{id}/information",
+      "previousOperationId": null,
+      "operationId": "GetCurrentPatientProtocolInformation",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientHistoryInformationController.cs",
+      "handler": "GetProtocolInformation",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/v1/patients/{patientId}/familyMembers",
+      "previousOperationId": null,
+      "operationId": "GetPatientFamilyMembers",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientFamilyMinimalApi.cs",
+      "handler": "GetFamilyMembers",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/public/v1/patients/{patientId}/familyMembers/{memberId}",
+      "previousOperationId": null,
+      "operationId": "RemovePatientFamilyMember",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientFamilyMinimalApi.cs",
+      "handler": "RemoveFamilyMember",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/v1/patients/{patientId}/familyMembers/{memberId}",
+      "previousOperationId": null,
+      "operationId": "GetPatientFamilyMemberById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientFamilyMinimalApi.cs",
+      "handler": "GetFamilyMemberById",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/v1/patients/{patientId}/familyOwner",
+      "previousOperationId": null,
+      "operationId": "GetPatientFamilyOwner",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PatientFamilyMinimalApi.cs",
+      "handler": "GetFamilyOwner",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/prices/{priceId}/view",
+      "previousOperationId": null,
+      "operationId": "GetOnlinePriceView",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PriceController.cs",
+      "handler": "GetPriceViewModel",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/prices/package-categories",
+      "previousOperationId": null,
+      "operationId": "GetOnlinePricePackageCategories",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PriceController.cs",
+      "handler": "GetPackageCategories",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/prices/packages",
+      "previousOperationId": null,
+      "operationId": "SearchOnlinePricePackages",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PriceController.cs",
+      "handler": "GetPackages",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/prices/packages/{id}",
+      "previousOperationId": null,
+      "operationId": "GetOnlinePricePackageById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PriceController.cs",
+      "handler": "GetPackage",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/promotions",
+      "previousOperationId": null,
+      "operationId": "GetPromotions",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PromotionController.cs",
+      "handler": "GetPromotions",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/promotions/product-promotion-info",
+      "previousOperationId": null,
+      "operationId": "GetPromotionPackages",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/PromotionController.cs",
+      "handler": "ProductPromotion",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/referringDoctors",
+      "previousOperationId": null,
+      "operationId": "GetReferringDoctorsByHospitalId",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/ReferringDoctorsController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/referringDoctors/{id}",
+      "previousOperationId": null,
+      "operationId": "GetReferringDoctorDetailsById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/v2/ReferringDoctorsController.cs",
+      "handler": "GetById",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/referringDoctor/CreateDirection",
+      "previousOperationId": null,
+      "operationId": "CreateReferringDoctorDirection",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsDirectionController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/referringDoctor/identity",
+      "previousOperationId": null,
+      "operationId": "CreateOrUpdateReferringDoctor",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsIdentityController.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/referringDoctor/identity",
+      "previousOperationId": null,
+      "operationId": "UpdateReferringDoctorIdentity",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsIdentityController.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/referringDoctor/print/survey/{surveyId}",
+      "previousOperationId": null,
+      "operationId": "PrintReferringDoctorSurvey",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsDirectionController.cs",
+      "handler": "GetProtocol",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/referringDoctor/printRaw/survey/{surveyId}",
+      "previousOperationId": null,
+      "operationId": "PrintReferringDoctorSurveyBase64",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsDirectionController.cs",
+      "handler": "GetProtocolRaw",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/referringDoctor/GetPatientList",
+      "previousOperationId": null,
+      "operationId": "GetReferringDoctorPatientsWithSurveys",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorDirectionV2Controller.cs",
+      "handler": "GetPatientList",
+      "status": "applied"
+    },
+    {
+      "method": "POST",
+      "path": "/api/refferal-message",
+      "previousOperationId": null,
+      "operationId": "CreateExternalReferralMessage",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ReferralApi/ReferalController.cs",
+      "handler": "CreateExternalMessage",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/rooms",
+      "previousOperationId": null,
+      "operationId": "SearchRooms",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "GetAll",
+      "status": "applied",
+      "registration": "shared room mapping with explicit per-route names"
+    },
+    {
+      "method": "POST",
+      "path": "/api/erp/v1/rooms",
+      "previousOperationId": null,
+      "operationId": "CreateRoom",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "Post",
+      "status": "applied"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/erp/v1/rooms/{roomId}",
+      "previousOperationId": null,
+      "operationId": "DeleteRoom",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "Delete",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/rooms/{roomId}",
+      "previousOperationId": null,
+      "operationId": "GetRoomById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "Get",
+      "status": "applied",
+      "registration": "shared room mapping with explicit per-route names"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/erp/v1/rooms/{roomId}",
+      "previousOperationId": null,
+      "operationId": "UpdateRoom",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "Put",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/rooms",
+      "previousOperationId": null,
+      "operationId": "SearchBookingRooms",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "GetAll",
+      "status": "applied",
+      "registration": "shared room mapping with explicit per-route names"
+    },
+    {
+      "method": "GET",
+      "path": "/api/online/v1/rooms/{roomId}",
+      "previousOperationId": null,
+      "operationId": "GetBookingRoomById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+      "handler": "Get",
+      "status": "applied",
+      "registration": "shared room mapping with explicit per-route names"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/sales-invoice",
+      "previousOperationId": null,
+      "operationId": "GetSalesInvoices",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/sales-invoice/{salesInvoiceId}",
+      "previousOperationId": null,
+      "operationId": "GetSalesInvoiceById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/sales-invoice/{salesInvoiceId}/sales-invoice-nomenclature",
+      "previousOperationId": null,
+      "operationId": "GetSalesInvoiceNomenclatures",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceController.cs",
+      "handler": "GetSalesInvoiceNomenclature",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/sales-invoice-nomenclature/{salesInvoiceNomenclatureId}",
+      "previousOperationId": null,
+      "operationId": "GetSalesInvoiceNomenclatureById",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceNomenclatureController.cs",
+      "handler": "Get",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/type-doctors/packages",
+      "previousOperationId": null,
+      "operationId": "GetPackagesByTypeDoctorIds",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPTypeDoctorsMinimalApi.cs",
+      "handler": "GetByPackages",
+      "status": "applied"
+    },
+    {
+      "method": "GET",
+      "path": "/api/erp/v1/type-doctors/users",
+      "previousOperationId": null,
+      "operationId": "GetUsersByTypeDoctorIds",
+      "source": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPTypeDoctorsMinimalApi.cs",
+      "handler": "GetByUsers",
+      "status": "applied"
+    }
+  ],
+  "exceptions": [],
+  "verification": {
+    "gitHead": "b434ebf50a779ced099fb7586be5f3a8ded16bb6",
+    "sourceHashes": [
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/Contract/OnlineContractApiController.cs",
+        "sha256": "342a0d23fac692c5cd7948d81268ae392778738aaf67c741608dd1ca85952994"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpenseCategorysController.cs",
+        "sha256": "96d4f9f421a31a8e68455ad60e3589e43740b173943d168aebbac2c173d5b984"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAdministrativeExpensesController.cs",
+        "sha256": "7e91486490317a877e4a8a48f7ed033eeb1f67e2268fe421552b3bc09e80fc57"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPAssuranceController.cs",
+        "sha256": "46689c8e036c9013201f7d6c68d84700a467693c5fe8fec3bd96d00ebfb8bb8b"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPContractorController.cs",
+        "sha256": "ad109043984a174404ff71161e0ff76cdbb6945b8dbdacd0f974d8cc5631a7ba"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPHospitalsController.cs",
+        "sha256": "96db83ae802cc6177779880cd7af09da30ae3d02cae06b4d30e0574184493c3a"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPPackagePriceController.cs",
+        "sha256": "d0d21e7c735b9a74c7f1c6e8bb207a61e73c55972bc051bb6cba9eb5a0518480"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPRoomsMinimalApi.cs",
+        "sha256": "1942e9b404dfa10839ecb676fa0942e7105456b06adc4dd5ba543814f60f8e3f"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceController.cs",
+        "sha256": "8ac7d53c8a031ae8c4329b6121d12b94534ff0e0c60ccc05bf948b6fc3a9cdb7"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPSalesInvoiceNomenclatureController.cs",
+        "sha256": "a59331c15d153152d37874a3b752bc6eda091cfc626f8e72823e5eada4305afa"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/ERPTypeDoctorsMinimalApi.cs",
+        "sha256": "8e92ee40590554123ea9b06188e4707d58ea3769c76330de13639129f63897e2"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/Files/ERPPublicFilesMinimalApi.cs",
+        "sha256": "c7a196ff0d7d2c4ae906b62dde98ac543f74e273190fdbc83270fef95ade7c6c"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ERP/Hospitalizations/ERPHospitalizationCategoryMinimalApi.cs",
+        "sha256": "82b8850911a5da02b3c6a33a6f514f6727ef96cb30abe3a5e7ec48ae9eaea638"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/Hospitals/HospitalsMiniamlApi.cs",
+        "sha256": "e579767de7b68ec4b2d30bf4c6c5646e7ecc08db9ad49814af9d3deb7b703966"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ReferralApi/ReferalController.cs",
+        "sha256": "6420bb434e13551b8336512f4339d917c263b9a081eb173142624e98ec8c138d"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorDirectionV2Controller.cs",
+        "sha256": "8388d52de3880b71095fb0483c55462655dffbb95c434f0971d8915f03761964"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsDirectionController.cs",
+        "sha256": "a202f0105694cb1cce2b64eba3637e1d68824ceed9f284d7e7a396ea8c275724"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/ReferralDoctors/ReferringDoctorsIdentityController.cs",
+        "sha256": "a08ca3a96f22808bc3a4446060f34e1c211132576eb8c3e123768be634fe9226"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PatientFamilyMinimalApi.cs",
+        "sha256": "5800fb154ab3d398061e09c347c7b46e744b39f6ba7152d90d0ec7f47727d03d"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PatientHistoryInformationController.cs",
+        "sha256": "1eccfe914bf3a096dc48119a4863e05af09183425dfbb8486db368e705d78071"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PatientIdentityController.cs",
+        "sha256": "81247375644add56fddb7b9565f08a5c438d335052a8e5bf920669f344382d9c"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PatientPrerecordsMinimalApi.cs",
+        "sha256": "21dc7907680e2182a5d3b68d31b8177a76fc0d32271e9f258a3b938d2c66bd29"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PatientsController.cs",
+        "sha256": "8527ddc0f4dc313ce8cb7033d845705c042eedeb1874d2b622fb255dfc9ade61"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PriceController.cs",
+        "sha256": "93d8183f8ab6ce59a619bf66a1b1b23e4a179b36a9a8072bcc570c367377be1e"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PromotionController.cs",
+        "sha256": "730f5c169009b5e93530741c698d56fa20e405e6a1ae79ed322c21f017c0c599"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/PublicCitiesMinimalApi.cs",
+        "sha256": "e94f555409c898ead7be67d32ce46fbeb45a0496c788c9cdfcb33e1e1c5ac954"
+      },
+      {
+        "path": "Gambit.WebApp/Controllers/PublicApi/v2/ReferringDoctorsController.cs",
+        "sha256": "422b16baed99d0eec0cc1a9719eebda111f9d637f4d798b7bb18ee473bee6871"
+      }
+    ],
+    "priorRenamesVerified": 108,
+    "tests": {
+      "skipped": 0,
+      "passed": 92,
+      "failed": 0,
+      "log": "C:\\Users\\OLEKSA~1\\AppData\\Local\\Temp/gambit-operation-additions-tests.log",
+      "filter": "FullyQualifiedName~Application.Swagger"
+    },
+    "routeNameConsumerReferencesFound": 0,
+    "endpointNamesUniqueIgnoringCase": true,
+    "build": {
+      "warnings": 9,
+      "errors": 0,
+      "log": "C:\\Users\\OLEKSA~1\\AppData\\Local\\Temp/gambit-operation-additions-build.log"
+    },
+    "diffCheck": "passed",
+    "dirtyWorkingTree": true
+  }
+}
