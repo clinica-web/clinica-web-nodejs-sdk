@@ -150,11 +150,9 @@ Official auth contract:
 
 ## Generation and verification
 
-`openapi/swagger.json` is the offline specification exported from the checked
-Gambit assembly on 2026-10-21 and shared with the .NET SDK.
-`openapi/source.json` records its assembly hash, working-tree provenance and SHA-256:
-`627abfdb55d99b529a84193a721ea672c57aa2229417d716275438d5b99d36bc`.
-It is not a fresh fetch from the running localhost host.
+`openapi/swagger.json` was downloaded from the configured dev endpoint on
+2026-10-21. `openapi/source.json` records retrieval time and the snapshot SHA-256.
+Downloading the schema does not verify live endpoint behavior.
 `openapi/operations.json` maps all **588 operations** to generated methods.
 `scripts/generate-sdk.mjs` generates 90 resource groups and all 420 model/enum
 schemas. [Complete API reference](docs/api-reference.md) lists every callable method.

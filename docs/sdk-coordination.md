@@ -4,9 +4,12 @@ Updated 2026-10-21. Rules were read from chat `01a0fd6c-d55e-71b2-b9b5-05695abc3
 
 ## Input and coverage
 
-The pinned offline snapshot matches the .NET SDK: SHA-256
-`627abfdb55d99b529a84193a721ea672c57aa2229417d716275438d5b99d36bc`.
-See [provenance](../openapi/source.json). It was exported from the backend assembly, not fetched from the running localhost host.
+The current snapshot was downloaded from the configured dev endpoint on
+2026-10-21. See [provenance](../openapi/source.json) for retrieval time and SHA-256.
+Compared with the preceding shared .NET snapshot, it adds five optional nullable
+properties to PublicPatientMetadataModel: CityName, RegionName, DistrictName,
+CityType and RegionalLogisticCenterid. Other differences are description line
+endings. Routes and operation IDs are unchanged. The .NET snapshot was not modified.
 
 The Node.js generator implements **588/588 operations and 420 schemas**, across 90 resource groups. [Complete reference](api-reference.md) and [machine-readable inventory](../openapi/operations.json) list every route and callable method.
 
